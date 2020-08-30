@@ -41,7 +41,7 @@
       </div>
       <div class="contact">
         <h1>CONTACT</h1>
-        <a href="tel: +48 661 149 308">+48 661 149 308</a>
+        <a href="tel: +48-661-149-308">+48 661 149 308</a>
         <a href="mailto: krzysh98@gmail.com">krzysh98@gmail.com</a>
         <div class="social__media">
           <Contact v-for="item in socialMedias" :key="item.id" :item="item"/>
@@ -145,6 +145,7 @@ export default {
     height: 100vh;
   }
   .container{
+    z-index: 999;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -196,6 +197,7 @@ export default {
       align-items: center;
 
       a{
+        cursor: pointer;
         padding: 20px;
         text-decoration: none;
         color: #FFFFFF;

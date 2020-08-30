@@ -1,5 +1,5 @@
 <template>
-  <div ref="starter" class="starter" @click="toggleClick()">
+  <div ref="starter" v-if="visibility" class="starter" @click="toggleClick()">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <h1 ref="slogan1" class="open__slogan">CLICK TO ENTER</h1>
     <img ref="starter__photo" class="starter__photo" src="../assets/world_map_.svg" alt="map__starter"/>
@@ -40,9 +40,12 @@ export default {
           {scale:10,opacity: 0, duration: 2});
       gsap.to(starter__photo,
           {x:-25, y: 30, duration: 2});
-      this.visibility = !this.visibility;
-    }
-  }
+
+      setTimeout(function () {
+        this.visibility = !this.visibility
+      }.bind(this), 3000);
+    },
+  },
 };
 
 </script>

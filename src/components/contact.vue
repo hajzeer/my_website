@@ -40,6 +40,7 @@ export default {
     height: 50px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 
 
     .social__media__logo {
