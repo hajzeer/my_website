@@ -31,7 +31,7 @@ export default {
         {opacity: 1, duration: 1.5, ease: "power4.out", delay: 2});
     gsap.fromTo(starter__photo,
         {y:0},
-        {y:15 ,repeat: -1, yoyo:true, duration: 2, delay: 2.5})
+        {y:20 ,repeat: -1, yoyo:true, duration: 2, delay: 2.5})
   },
   methods: {
     toggleClick()  {
