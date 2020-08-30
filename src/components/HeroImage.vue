@@ -52,7 +52,7 @@ name: "HeroImage"
     height: 70%;
     background-color:transparent;
     background-image: url('../../src/assets/HeroImage.svg');
-    mix-blend-mode: multiply;
+    mix-blend-mode: soft-light;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
