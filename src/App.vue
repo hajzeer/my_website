@@ -9,7 +9,7 @@
       <div class="main__info">
         <h2 class="slogan">"Strive for Greatness" <br/> LeBron James</h2>
         <h1 class="about_me">ABOUT ME</h1>
-        <p>
+        <p class="main__desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis accumsan mi, et efficitur erat bibendum ut. Curabitur condimentum magna ac nisl accumsan, non eleifend orci vestibulum. Morbi at sem vulputate, iaculis nunc quis, molestie mi. Maecenas volutpat posuere mauris, vitae egestas dolor ultrices non.
         </p>
       </div>
@@ -105,7 +105,7 @@ export default {
         {id: 9, photo: adobexd, name: "Adobe XD"},
       ],
       languages: [
-        {id: 0, name: "English", level: "Intermediate"},
+        {id: 0, name: "English", level: "C1"},
         {id: 1, name: "Polish", level: "Native"},
       ],
       socialMedias: [
@@ -137,7 +137,7 @@ export default {
     padding: 0;
   }
   .app {
-    background: #FFED00;
+    background: #3254a8;
     width: 100%;
   }
   .wrapper{
@@ -158,6 +158,13 @@ export default {
     justify-content: center;
     align-items: center;
 
+    p {
+      font-size: 20px;
+    }
+
+    .main__desc {
+      padding: 20px;
+    }
     h1 {
       font-size: 2em;
     }
@@ -200,6 +207,7 @@ export default {
         cursor: pointer;
         padding: 20px;
         text-decoration: none;
+        font-size: 20px;
         color: #FFFFFF;
       }
 

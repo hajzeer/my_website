@@ -39,7 +39,6 @@ export default {
   font-family: 'Montserrat', sans-serif;
   color: #FFFFFF;
   text-align: center;
-  background-color: #FFED00;
 
   display: flex;
   flex-direction: column;

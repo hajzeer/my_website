@@ -59,7 +59,7 @@ export default {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background-color: #FFED00;
+  background-color: #3254a8;
 
   display: flex;
   flex-direction: column;

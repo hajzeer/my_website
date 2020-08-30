@@ -18,7 +18,7 @@ name: "HeroImage"
 <style scoped lang="scss">
 .hero__imageOuter{
   z-index: -1;
-  background: #FF9900;
+  background: #243a70;
   width: 100%;
   height: 100vh;
 
@@ -31,7 +31,7 @@ name: "HeroImage"
     border-bottom-left-radius: 30% ;
     border-bottom-right-radius: 30% ;
     box-shadow: 0 0 50rem black;
-    background-color: #FFED00;
+    background-color: #3254a8;
     width: 100%;
     height: 40%;
     h1 {
@@ -52,7 +52,7 @@ name: "HeroImage"
     height: 70%;
     background-color:transparent;
     background-image: url('../../src/assets/HeroImage.svg');
-    mix-blend-mode: luminosity;
+    mix-blend-mode: multiply;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
