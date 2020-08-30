@@ -20,15 +20,26 @@ export default {
   mounted() {
     const {starter__photo, slogan, slogan1} = this.$refs;
 
-    gsap.fromTo(slogan1, {opacity: 0}, {opacity: 1, duration: 1.5, ease: "power4.out", delay: 2});
-    gsap.fromTo(starter__photo, {opacity: 0, y: -50}, {opacity: 1, y: 0, duration: 3, ease: "power4.out", delay: .6});
-    gsap.fromTo(slogan, {opacity: 0}, {opacity: 1, duration: 1.5, ease: "power4.out", delay: 2});
+    gsap.fromTo(slogan1,
+        {opacity: 0},
+        {opacity: 1, duration: 1.5, ease: "power4.out", delay: 2});
+    gsap.fromTo(starter__photo,
+        {opacity: 0, y: -50},
+        {opacity: 1, y: 0, duration: 3, ease: "power4.out", delay: .6});
+    gsap.fromTo(slogan,
+        {opacity: 0},
+        {opacity: 1, duration: 1.5, ease: "power4.out", delay: 2});
+    gsap.fromTo(starter__photo,
+        {y:0},
+        {y:15 ,repeat: -1, yoyo:true, duration: 2, delay: 2.5})
   },
   methods: {
     toggleClick()  {
       const {starter, starter__photo} = this.$refs;
-      gsap.to(starter, {scale:10,opacity: 0, duration: 2});
-      gsap.to(starter__photo, {x:-25, y: 30, duration: 2});
+      gsap.to(starter,
+          {scale:10,opacity: 0, duration: 2});
+      gsap.to(starter__photo,
+          {x:-25, y: 30, duration: 2});
       this.visibility = !this.visibility;
     }
   }

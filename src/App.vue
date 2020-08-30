@@ -15,6 +15,7 @@
       </div>
       <div class="my__projects">
         <h1>MY PROJECTS</h1>
+        <Projects/>
       </div>
     </div>
   </div>
@@ -23,12 +24,14 @@
 <script>
 import Starter from "@/components/starter";
 import HeroImage from "@/components/HeroImage";
+import Projects from "@/components/Projects";
 
 export default {
   name: 'App',
   components: {
     Starter,
     HeroImage,
+    Projects
   }
 }
 </script>
