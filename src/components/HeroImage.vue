@@ -28,6 +28,7 @@ name: "HeroImage"
   align-items: center;
 
   .main {
+    z-index: 2;
     overflow: hidden;
     border-bottom-left-radius: 30% ;
     border-bottom-right-radius: 30% ;
@@ -53,10 +54,20 @@ name: "HeroImage"
     height: 70%;
     background-color:transparent;
     background-image: url('../../src/assets/HeroImage.svg');
-    mix-blend-mode: soft-light;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &::after {
+      content: '';
+      background: rgba(0, 0, 0, .2);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>

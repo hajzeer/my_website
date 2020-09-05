@@ -54,7 +54,7 @@ export default {
 <style scoped lang="scss">
 
 .starter {
-  z-index: 1;
+  z-index: 999;
   margin: 0;
   padding: 0;
   width: 100%;
