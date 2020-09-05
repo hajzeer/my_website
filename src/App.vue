@@ -5,48 +5,47 @@
     <div class="wrapper">
       <HeroImage />
     </div>
-    <div class="container">
-      <div class="main__info">
+    <div ref="container" class="container">
+      <section class="main__info">
         <h2 class="slogan">"Strive for Greatness" <br/> LeBron James</h2>
         <h1 class="about_me">ABOUT ME</h1>
         <p class="main__desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis accumsan mi, et efficitur erat bibendum ut. Curabitur condimentum magna ac nisl accumsan, non eleifend orci vestibulum. Morbi at sem vulputate, iaculis nunc quis, molestie mi. Maecenas volutpat posuere mauris, vitae egestas dolor ultrices non.
         </p>
-      </div>
-      <div class="my__projects">
+      </section>
+      <section class="my__projects">
         <h1>MY PROJECTS</h1>
           work in progress
         <Projects/>
-      </div>
-      <div class="technical__skills">
+      </section>
+      <section class="technical__skills">
         <h1>TECHNICAL SKILLS</h1>
-        <div class="resoults">
+        <section class="resoults">
           <skills
             v-for="item in resoults"
             :item="item"
             :key="item.id"
           />
-        </div>
-      </div>
-      <div class="hobby">
+        </section>
+      </section>
+      <section class="hobby">
         <h1>HOBBY</h1>
         work in progress
-      </div>
-      <div class="lang">
+      </section>
+      <section class="lang">
         <h1>LANGUAGE</h1>
-        <div class="language" v-for="language in languages" :key="language.id">
+        <section class="language" v-for="language in languages" :key="language.id">
           <p>{{language.name}}</p>
           <p>{{language.level}}</p>
-        </div>
-      </div>
-      <div class="contact">
+        </section>
+      </section>
+      <section class="contact">
         <h1>CONTACT</h1>
-        <a href="tel: +48-661-149-308">+48 661 149 308</a>
         <a href="mailto: krzysh98@gmail.com">krzysh98@gmail.com</a>
         <div class="social__media">
           <Contact v-for="item in socialMedias" :key="item.id" :item="item"/>
         </div>
-      </div>
+      </section>
       <div class="designer">
         <p>
           © 2020 Krzysztof Hajder
@@ -59,6 +58,9 @@
 </template>
 
 <script>
+import gsap from 'gsap';
+import {ScrollTrigger} from  'gsap/ScrollTrigger';
+
 import Starter from "@/components/starter";
 import HeroImage from "@/components/HeroImage";
 import Projects from "@/components/Projects";
@@ -128,11 +130,25 @@ export default {
       ],
     };
   },
+  mounted() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+      gsap.fromTo(section.children, {y: '+=30', opacity: 0}, {y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'easeInOut', scrollTrigger: {
+          trigger: section,
+          start: 'top 65%',
+          markers: true,
+        }});
+    });
+  },
 };
 </script>
 
 <style lang="scss">
   body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
@@ -146,7 +162,7 @@ export default {
   }
   .container{
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     top: 0;
@@ -157,6 +173,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 
     p {
       font-size: 20px;

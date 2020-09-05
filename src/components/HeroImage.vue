@@ -28,6 +28,7 @@ name: "HeroImage"
   align-items: center;
 
   .main {
+    overflow: hidden;
     border-bottom-left-radius: 30% ;
     border-bottom-right-radius: 30% ;
     box-shadow: 0 0 50rem black;
