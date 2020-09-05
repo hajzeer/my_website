@@ -77,6 +77,7 @@ import nuxt from "./assets/nuxt.png";
 import git from "./assets/git.png";
 import csharp from "./assets/csharp.png";
 import adobexd from "./assets/adobexd.png";
+import gsapLogo from "./assets/gsap.svg";
 
 import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
@@ -105,6 +106,7 @@ export default {
         {id: 7, photo: git, name: "GIT"},
         {id: 8, photo: csharp, name: "C#"},
         {id: 9, photo: adobexd, name: "Adobe XD"},
+        {id: 10, photo: gsapLogo, name: "GSAP"},
       ],
       languages: [
         {id: 0, name: "English", level: "C1"},
@@ -139,7 +141,6 @@ export default {
       gsap.fromTo(section.children, {y: '+=30', opacity: 0}, {y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'easeInOut', scrollTrigger: {
           trigger: section,
           start: 'top 65%',
-          markers: true,
         }});
     });
   },
