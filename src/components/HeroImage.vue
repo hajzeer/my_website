@@ -48,11 +48,8 @@ name: "HeroImage"
   }
 
   .hero__imageInner {
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
     width: 100%;
     height: 70%;
-    background-color:transparent;
     background-image: url('../../src/assets/HeroImage.svg');
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -66,7 +63,7 @@ name: "HeroImage"
       left: 0;
       z-index: 1;
       width: 100%;
-      height: 100%;
+      height: 100vh;
     }
   }
 }
