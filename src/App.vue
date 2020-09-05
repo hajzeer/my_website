@@ -10,7 +10,21 @@
         <h2 class="slogan">"Strive for Greatness" <br/> LeBron James</h2>
         <h1 class="about_me">ABOUT ME</h1>
         <p class="main__desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis accumsan mi, et efficitur erat bibendum ut. Curabitur condimentum magna ac nisl accumsan, non eleifend orci vestibulum. Morbi at sem vulputate, iaculis nunc quis, molestie mi. Maecenas volutpat posuere mauris, vitae egestas dolor ultrices non.
+          I am a full of zeal, front-end developer.
+          My journey with programming started many of years ago and
+          it was a long path to find main topic in programming.
+          <br/>
+          Nowadays I am a student of computer science and freelance developer.
+          <br/><br/>
+          <span>
+            If you are interested in co-op to design and create
+            website for you or your business,
+          </span>
+          <br/><br/>
+            Write to me DM now!
+          <br/>
+          My previous projects are below.
+          Links to contact are on the buttom of the site
         </p>
       </section>
       <section class="my__projects">
@@ -125,7 +139,7 @@ export default {
         {id: 10, photo: gsapLogo, name: "GSAP"},
       ],
       languages: [
-        {id: 0, name: "English", level: "C1"},
+        {id: 0, name: "English", level: "B2"},
         {id: 1, name: "Polish", level: "Native"},
       ],
       socialMedias: [
@@ -147,12 +161,12 @@ export default {
           social_link: "https://www.instagram.com/krzysiuhajder/"},
       ],
       hobbies: [
-        {id: 0, name: "traveling", photo: travel},
-        {id: 1, name: "programming", photo: programming},
-        {id: 2, name: "basketball", photo: basketball},
-        {id: 3, name: "cosmos", photo: cosmos},
-        {id: 4, name: "technology", photo: technology},
-        {id: 5, name: "books", photo: books},
+        {id: 0, name: "Traveling", photo: travel},
+        {id: 1, name: "Programming", photo: programming},
+        {id: 2, name: "Basketball", photo: basketball},
+        {id: 3, name: "Cosmos", photo: cosmos},
+        {id: 4, name: "Technology", photo: technology},
+        {id: 5, name: "Books", photo: books},
 
       ],
     };
@@ -206,6 +220,10 @@ export default {
 
     p {
       font-size: 20px;
+
+      span {
+        font-weight: bolder;
+      }
     }
 
     .main__desc {
