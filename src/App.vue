@@ -41,6 +41,7 @@
       </section>
       <section class="contact">
         <h1>CONTACT</h1>
+        <img class="social__media__photo" src="./assets/social_media.svg" alt="social__media__photo"/>
         <a href="mailto: krzysh98@gmail.com">krzysh98@gmail.com</a>
         <div class="social__media">
           <Contact v-for="item in socialMedias" :key="item.id" :item="item"/>
