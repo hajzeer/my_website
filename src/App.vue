@@ -30,7 +30,13 @@
       </section>
       <section class="hobby">
         <h1>HOBBY</h1>
-        work in progress
+        <section class="resoults">
+          <hobby
+            v-for="item in hobbies"
+            :item="item"
+            :key="item.id"
+          />
+        </section>
       </section>
       <section class="lang">
         <h1>LANGUAGE</h1>
@@ -67,6 +73,7 @@ import HeroImage from "@/components/HeroImage";
 import Projects from "@/components/Projects";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
+import Hobby from "@/components/hobby";
 
 import js from "./assets/js.png";
 import html from "./assets/html.png";
@@ -85,6 +92,13 @@ import linkedin from "./assets/linkedin.png";
 import facebook from "./assets/facebook.png";
 import instagram from "./assets/instagram.png";
 
+import basketball from "./assets/basketball.svg";
+import travel from "./assets/travel.svg";
+import programming from "./assets/programming.svg";
+import cosmos from "./assets/cosmos.svg";
+import technology from "./assets/tech.svg";
+import books from "./assets/books.svg";
+
 export default {
   name: 'App',
   components: {
@@ -93,6 +107,7 @@ export default {
     Projects,
     Skills,
     Contact,
+    Hobby,
   },
   data() {
     return{
@@ -131,6 +146,15 @@ export default {
           src_social: instagram,
           social_link: "https://www.instagram.com/krzysiuhajder/"},
       ],
+      hobbies: [
+        {id: 0, name: "traveling", photo: travel},
+        {id: 1, name: "programming", photo: programming},
+        {id: 2, name: "basketball", photo: basketball},
+        {id: 3, name: "cosmos", photo: cosmos},
+        {id: 4, name: "technology", photo: technology},
+        {id: 5, name: "books", photo: books},
+
+      ],
     };
   },
   mounted() {
@@ -139,10 +163,13 @@ export default {
     const sections = document.querySelectorAll('section');
 
     sections.forEach(section => {
-      gsap.fromTo(section.children, {y: '+=30', opacity: 0}, {y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'easeInOut', scrollTrigger: {
-          trigger: section,
-          start: 'top 65%',
-        }});
+      gsap.fromTo(section.children,
+          {y: '+=30', opacity: 0},
+          {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: 'easeInOut',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 65%',
+          }});
     });
   },
 };
