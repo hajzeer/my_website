@@ -24,7 +24,7 @@
             Write to me DM now!
           <br/>
           My previous projects are below.
-          Links to contact are on the buttom of the site
+          Links to contact are on the bottom of the site
         </p>
       </section>
       <section class="my__projects">
