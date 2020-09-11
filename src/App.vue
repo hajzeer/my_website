@@ -29,8 +29,13 @@
       </section>
       <section class="my__projects">
         <h1>MY PROJECTS</h1>
-          work in progress
-        <Projects/>
+        <section>
+          <Projects
+            v-for="item in projects"
+            :item="item"
+            :key="item.id"
+          />
+        </section>
       </section>
       <section class="technical__skills">
         <h1>TECHNICAL SKILLS</h1>
@@ -113,6 +118,10 @@ import cosmos from "./assets/cosmos.svg";
 import technology from "./assets/tech.svg";
 import books from "./assets/books.svg";
 
+import srebrnacma from "./assets/srebrnacma.png";
+import autoserwis from "./assets/autoserwis.png";
+import coda from './assets/grupacoda.png';
+
 export default {
   name: 'App',
   components: {
@@ -162,12 +171,42 @@ export default {
       ],
       hobbies: [
         {id: 0, name: "Traveling", photo: travel},
-        {id: 1, name: "Programming", photo: programming},
+        {id: 1, name: "Coding", photo: programming},
         {id: 2, name: "Basketball", photo: basketball},
-        {id: 3, name: "Cosmos", photo: cosmos},
+        {id: 3, name: "Astronomy", photo: cosmos},
         {id: 4, name: "Technology", photo: technology},
         {id: 5, name: "Books", photo: books},
 
+      ],
+      projects: [
+        {id: 0,
+          name: "Srebrna Ćma Tattoo Studio",
+          photo: srebrnacma,
+          github_url: "https://github.com/hajzeer/srebrna_cma_tattoostudio",
+          website_url: "https://srebrnacma.pl/",
+          desc: "Website to perform work of Tattoo Studio",
+          used_tech: "Used: Vue, Instagram API",
+        },
+        {
+          id: 1,
+          name: "Autosetwis-lakiernictwo",
+          photo: autoserwis,
+          github_url: "https://github.com/hajzeer/autoserwis-vue-app",
+          website_url: "https://autoserwis-lakiernictwo.pl/#/",
+          desc: "This website was created for autoserwis paintshop, " +
+              "to present work and services for potentional costumer",
+          used_tech: "Used: Vue, link-router",
+        },
+        {
+          id: 2,
+          name: "Grupa CODA",
+          photo: coda,
+          github_url: "https://github.com/hajzeer/CODA_web_2_react",
+          website_url: "https://grupacoda.pl/",
+          desc: "Presentation of company's services for " +
+              "potentional constumers",
+          used_tech: "Used: React",
+        },
       ],
     };
   },
@@ -178,8 +217,8 @@ export default {
 
     sections.forEach(section => {
       gsap.fromTo(section.children,
-          {y: '+=30', opacity: 0},
-          {y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: 'easeInOut',
+          {y: '+=100', opacity: 0},
+          {y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'easeInOut',
             scrollTrigger: {
               trigger: section,
               start: 'top 65%',
@@ -218,6 +257,10 @@ export default {
     align-items: center;
 
 
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+
     p {
       font-size: 20px;
 
@@ -232,10 +275,6 @@ export default {
     h1 {
       font-size: 2em;
     }
-
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
-    text-align: center;
 
     .main__info{
       .slogan{

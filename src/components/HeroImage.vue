@@ -2,7 +2,7 @@
 <div class="hero__imageOuter">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
   <div class="main">
-    <h1 ref="main" class="main_text1">IT IS ME</h1>
+    <h1 ref="main" class="main_text1">IT'S ME</h1>
     <h1 ref="main" class="main_text2">KRZYSZTOF HAJDER</h1>
   </div>
   <div class="hero__imageInner"></div>
@@ -28,14 +28,14 @@ name: "HeroImage"
   align-items: center;
 
   .main {
-    z-index: 2;
     overflow: hidden;
     border-bottom-left-radius: 30% ;
     border-bottom-right-radius: 30% ;
     box-shadow: 0 0 50rem black;
     background-color: #3254a8;
     width: 100%;
-    height: 40%;
+    height: 50%;
+
     h1 {
       font-family: 'Montserrat', sans-serif;
       color: #FFFFFF;
@@ -49,11 +49,14 @@ name: "HeroImage"
 
   .hero__imageInner {
     width: 100%;
-    height: 70%;
-    background-image: url('../../src/assets/HeroImage.svg');
+    height: 100vh;
+    margin: 50px;
+    overflow: hidden;
+    background-image: url('../../src/assets/HeroImage.png');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 100%;
   }
 }
 </style>
