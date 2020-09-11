@@ -1,5 +1,5 @@
 <template>
-<div class="projects">
+<section class="projects">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
   <div class="projecst__Inner">
     <img class="perform__photo" :src="photo"/>
@@ -15,7 +15,7 @@
       </button>
     </div>
   </div>
-</div>
+</section>
 </template>
 
 <script>
