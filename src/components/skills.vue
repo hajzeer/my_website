@@ -54,6 +54,13 @@ export default {
     height: 80px;
     margin-bottom: -20px;
   }
+
+  @media (min-width: 768px) {
+    .skill__logo {
+      width: 120px;
+      height: 120px;
+    }
+  }
 }
 
 </style>

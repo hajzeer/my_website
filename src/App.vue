@@ -189,7 +189,7 @@ export default {
         },
         {
           id: 1,
-          name: "Autosetwis-lakiernictwo",
+          name: "Autoserwis-lakiernictwo",
           photo: autoserwis,
           github_url: "https://github.com/hajzeer/autoserwis-vue-app",
           website_url: "https://autoserwis-lakiernictwo.pl/#/",
@@ -319,6 +319,37 @@ export default {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .resoults {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 30px;
+      }
+      .contact {
+        a {
+          font-size: 30px;
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .resoults {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 100px;
       }
     }
   }

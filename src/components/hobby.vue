@@ -54,5 +54,12 @@ name: "hobby",
     height: 150px;
     margin-bottom: -20px;
   }
+
+  @media (min-width: 768px) {
+    .hobby__logo {
+      width: 200px;
+      height: 200px;
+    }
+  }
 }
 </style>

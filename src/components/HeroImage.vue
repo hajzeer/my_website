@@ -58,5 +58,23 @@ name: "HeroImage"
     background-size: cover;
     border-radius: 100%;
   }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3em;
+    }
+
+    .hero__imageInner {
+      border-radius: 50%;
+      margin: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero__imageInner {
+      border-radius: 50%;
+      width: 50%;
+    }
+  }
 }
 </style>
