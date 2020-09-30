@@ -121,6 +121,7 @@ import books from "./assets/books.svg";
 import srebrnacma from "./assets/srebrnacma.png";
 import autoserwis from "./assets/autoserwis.png";
 import coda from './assets/grupacoda.png';
+import symetria from './assets/symertia.png';
 
 export default {
   name: 'App',
@@ -206,6 +207,16 @@ export default {
           desc: "Presentation of company's services for " +
               "potentional constumers",
           used_tech: "Used: React",
+        },
+        {
+          id: 3,
+          name: "Symetria Przestrzenna",
+          photo: symetria,
+          github_url: "https://github.com/hajzeer/symetria_promienista_website",
+          website_url: "https://symetriapromienista.netlify.app/",
+          desc: "Artist's work presentation for " +
+              "potentional constumers",
+          used_tech: "Used: React, Router, gsap, styled-components",
         },
       ],
     };
